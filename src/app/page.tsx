@@ -43,7 +43,7 @@ export default function Home() {
             </Link>
           </Button>
           <Button asChild variant="outline" size="icon" className="rounded-full w-12 h-12 glass border-0 hover:bg-white/20 hover:text-primary hover:scale-110 transition-all">
-            <Link href="https://linkedin.com/in/jamal-uddin" target="_blank">
+            <Link href="https://www.linkedin.com/in/jamal-uddin-mallick-791221282/" target="_blank">
               <Linkedin className="w-5 h-5" />
             </Link>
           </Button>
