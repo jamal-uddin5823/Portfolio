@@ -1,11 +1,65 @@
 "use client";
 
-import { useRef, useMemo } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useRef, useMemo, useEffect, useState } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
 export default function NeuralNetwork() {
     const groupRef = useRef<THREE.Group>(null);
+    const { gl } = useThree();
+
+    // Mouse position state (normalized -1 to 1)
+    const mouse = useRef({ x: 0, y: 0 });
+    const targetRotation = useRef({ x: 0, y: 0 });
+    const [isDragging, setIsDragging] = useState(false);
+    const dragStart = useRef({ x: 0, y: 0 });
+    const dragRotation = useRef({ x: 0, y: 0 });
+
+    // Track mouse movement globally across the entire window
+    useEffect(() => {
+        const canvas = gl.domElement;
+
+        const handleMouseMove = (e: MouseEvent) => {
+            // Normalize to -1 to 1 based on window size (global tracking)
+            mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+            if (isDragging) {
+                const deltaX = e.clientX - dragStart.current.x;
+                const deltaY = e.clientY - dragStart.current.y;
+                targetRotation.current.y = dragRotation.current.y + deltaX * 0.01;
+                targetRotation.current.x = dragRotation.current.x + deltaY * 0.01;
+            }
+        };
+
+        const handleMouseDown = (e: MouseEvent) => {
+            // Only start dragging if clicking on the canvas
+            if (e.target === canvas) {
+                setIsDragging(true);
+                dragStart.current = { x: e.clientX, y: e.clientY };
+                dragRotation.current = { ...targetRotation.current };
+                canvas.style.cursor = 'grabbing';
+            }
+        };
+
+        const handleMouseUp = () => {
+            setIsDragging(false);
+            canvas.style.cursor = 'grab';
+        };
+
+        canvas.style.cursor = 'grab';
+
+        // Listen on window for global mouse tracking
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mousedown', handleMouseDown);
+        window.addEventListener('mouseup', handleMouseUp);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mousedown', handleMouseDown);
+            window.removeEventListener('mouseup', handleMouseUp);
+        };
+    }, [gl, isDragging]);
 
     // Create particles
     const particleCount = 200;
@@ -41,8 +95,19 @@ export default function NeuralNetwork() {
 
     useFrame((state) => {
         if (groupRef.current) {
-            groupRef.current.rotation.y = state.clock.getElapsedTime() * 0.1;
-            groupRef.current.rotation.x = Math.sin(state.clock.getElapsedTime() * 0.05) * 0.2;
+            if (!isDragging) {
+                // When not dragging, follow cursor with subtle movement + auto rotation
+                const autoRotateY = state.clock.getElapsedTime() * 0.05;
+                const mouseInfluenceX = mouse.current.y * 0.3;
+                const mouseInfluenceY = mouse.current.x * 0.5;
+
+                targetRotation.current.x = mouseInfluenceX;
+                targetRotation.current.y = autoRotateY + mouseInfluenceY;
+            }
+
+            // Smooth interpolation (lerp) for fluid movement
+            groupRef.current.rotation.x += (targetRotation.current.x - groupRef.current.rotation.x) * 0.05;
+            groupRef.current.rotation.y += (targetRotation.current.y - groupRef.current.rotation.y) * 0.05;
         }
     });
 
