@@ -1,0 +1,177 @@
+{
+    "personalInfo": {
+        "name": "Mohd. Jamal Uddin Mallick Tahmid",
+        "shortName": "Jamal Uddin",
+        "title": "CSE Undergrad & AI Researcher",
+        "email": "jamaluddin10775@gmail.com",
+        "phone": "+880 1580384068",
+        "github": "https://github.com/jamal-uddin5823",
+        "linkedin": "https://www.linkedin.com/in/jamal-uddin-mallick-791221282/",
+        "location": "Mohammadpur, Dhaka, Bangladesh",
+        "bio": "I am a Computer Science undergraduate at the University of Dhaka with a strong focus on AI, Machine Learning, and Full Stack Development. My research interests include Computer Vision and Deep Learning, specifically in low-light image enhancement."
+    },
+    "thesis": {
+        "title": "Face Recognition in Low-Light Videos",
+        "description": "Enhancing visibility in low-light conditions using Deep Learning-based Image Enhancement to improve Face Recognition accuracy.",
+        "basePaper": "HVI-CIDNet (CVPR2025)",
+        "status": "Ongoing Thesis",
+        "tags": [
+            "Computer Vision",
+            "Deep Learning",
+            "Low-Light Enhancement",
+            "Face Recognition"
+        ]
+    },
+    "projects": [
+        {
+            "title": "Khorchapati",
+            "description": "Smart financial app using foundational models for expense tracking and insights. Features natural language interaction, receipt scanning, and intelligent budget alerts.",
+            "tech": [
+                "AI",
+                "Foundational Models",
+                "Mobile"
+            ],
+            "link": "https://github.com/ShahadIshraq/KhorchaPati",
+            "status": "Ongoing"
+        },
+        {
+            "title": "PoribeshAI",
+            "description": "AI-powered smart waste management platform. Features waste classification (94% accuracy), dynamic route optimization (30% cost reduction), and microservices architecture.",
+            "tech": [
+                "React",
+                "Spring Boot",
+                "FastAPI",
+                "Gemini 2.5",
+                "Computer Vision"
+            ],
+            "link": "https://github.com/orgs/visionX-DU/repositories"
+        },
+        {
+            "title": "Locato",
+            "description": "React Native Expo app for finding specialists using location-based AI recommendations. Includes real-time chat and appointment booking.",
+            "tech": [
+                "React Native",
+                "Expo",
+                "AI Recommendations"
+            ],
+            "link": "https://github.com/tasniaiffat/Locato"
+        },
+        {
+            "title": "ShouldStream",
+            "description": "P2P real-time video streaming and chat application using Python. Implements custom flow/congestion control over TCP/UDP.",
+            "tech": [
+                "Python",
+                "OpenCV",
+                "Networking",
+                "P2P"
+            ],
+            "link": "https://github.com/jamal-uddin5823/CSE3101-Networking-Project-"
+        },
+        {
+            "title": "GadgetGrove",
+            "description": "E-commerce platform with AI chatbot and AR product visualization.",
+            "tech": [
+                "Next.js",
+                "Spring Boot",
+                "FastAPI",
+                "AR"
+            ],
+            "link": "https://github.com/jamal-uddin5823/GadgetGrove-Javafest"
+        },
+        {
+            "title": "MediHelp",
+            "description": "Medical diagnosis and doctor search platform with AI-driven symptom checker.",
+            "tech": [
+                "Java",
+                "Firebase",
+                "AI"
+            ],
+            "link": "https://github.com/jamal-uddin5823/MediHelp"
+        }
+    ],
+    "skills": {
+        "languages": [
+            "C/C++",
+            "Python",
+            "Java",
+            "JavaScript",
+            "TypeScript",
+            "Go"
+        ],
+        "frontend": [
+            "React",
+            "Next.js",
+            "React Native",
+            "Expo",
+            "Electron",
+            "HTML",
+            "CSS"
+        ],
+        "backend": [
+            "Express",
+            "Spring Boot",
+            "FastAPI",
+            "Firebase",
+            "RESTful APIs",
+            "GraphQL"
+        ],
+        "databases": [
+            "PostgreSQL",
+            "MySQL",
+            "MongoDB",
+            "Redis"
+        ],
+        "ai_ml": [
+            "TensorFlow",
+            "Keras",
+            "PyTorch",
+            "OpenCV",
+            "Scikit-learn",
+            "LangChain",
+            "Hugging Face"
+        ],
+        "tools": [
+            "Git",
+            "Docker",
+            "Linux",
+            "Bash",
+            "Postman"
+        ]
+    },
+    "hackathons": [
+        {
+            "title": "InnovateX 2025 Hackathon",
+            "position": "2nd Runner-up",
+            "organizer": "University of Asia Pacific",
+            "team": "Team DUPrometheus"
+        },
+        {
+            "title": "1st S.N. Bose Science Festival 2025 Hackathon",
+            "position": "5th Place",
+            "team": "Team DUPrometheus"
+        },
+        {
+            "title": "BUET CSE Fest 2024 Hackathon",
+            "position": "Top 10 Finalist",
+            "team": "Team NOFEAR"
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Sc. in Computer Science and Engineering",
+            "institution": "University of Dhaka",
+            "year": "Expected Jan 2026",
+            "details": "CGPA: 3.94/4.00"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Supervised Machine Learning: Regression and Classification (Coursera)",
+            "link": "https://www.coursera.org/account/accomplishments/verify/Z9HXZMP6VDMZ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course"
+        },
+        {
+            "name": "Advanced Learning Algorithms (Coursera)",
+            "link": "https://www.coursera.org/account/accomplishments/verify/C21XMARQX766?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+        }
+    ]
+}
