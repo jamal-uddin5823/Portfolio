@@ -1,5 +1,15 @@
+// Local icons that aren't available on Simple Icons CDN
+const localIcons: Record<string, string> = {
+    "Hyperledger Fabric": "/icons/hyperledger.svg",
+};
+
 // Shared utility for mapping technology names to Simple Icons slugs
 export const getTechIconUrl = (tech: string): string | null => {
+    // Check for local icons first
+    if (localIcons[tech]) {
+        return localIcons[tech];
+    }
+
     const slugs: Record<string, string> = {
         // Languages
         "Python": "python",
@@ -17,6 +27,7 @@ export const getTechIconUrl = (tech: string): string | null => {
         "Electron": "electron",
         "HTML": "html5",
         "CSS": "css",
+        "Tailwind CSS": "tailwindcss",
 
         // Backend
         "Express": "express",
@@ -39,6 +50,7 @@ export const getTechIconUrl = (tech: string): string | null => {
         "OpenCV": "opencv",
         "Scikit-learn": "scikitlearn",
         "LangChain": "langchain",
+        "LangGraph": "langchain",
         "Hugging Face": "huggingface",
         "AI": "openai",
         "Gemini 2.5": "googlegemini",
@@ -57,6 +69,16 @@ export const getTechIconUrl = (tech: string): string | null => {
         "Networking": "cisco",
         "P2P": "webrtc",
         "Mobile": "android",
+        "Stripe API": "stripe",
+        "Google Maps API": "googlemaps",
+        "Tkinter": "python",
+        "Pyaudio": "python",
+        "Room Database": "android",
+        "Android": "android",
+        "Mistral AI": "mistralai",
+        "MistralAI": "mistralai",
+        "iOS": "apple",
+        "MacOS": "apple",
     };
 
     const slug = slugs[tech];
@@ -75,6 +97,7 @@ export const getTechEmoji = (tech: string): string => {
         "Networking": "🌐",
         "P2P": "🔗",
         "AI Recommendations": "💡",
+        "Hyperledger Fabric": "⛓️",
     };
 
     return emojis[tech] || "💻";

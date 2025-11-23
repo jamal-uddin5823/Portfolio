@@ -232,7 +232,7 @@ export default function BentoGrid() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="relative z-10 h-full flex flex-col justify-center">
-                            <h3 className="text-sm font-medium text-gray-400 mb-3">Projects</h3>
+                            <h3 className="text-sm font-medium text-gray-400 mb-3">Featured Projects</h3>
                             <div className="flex items-end gap-2">
                                 <motion.div
                                     className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"

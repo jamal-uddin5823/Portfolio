@@ -27,9 +27,16 @@
             "title": "Khorchapati",
             "description": "Smart financial app using foundational models for expense tracking and insights. Features natural language interaction, receipt scanning, and intelligent budget alerts.",
             "tech": [
+                "React Native",
+                "Expo",
+                "Electron",
+                "LangChain",
+                "LangGraph",
                 "AI",
                 "Foundational Models",
-                "Mobile"
+                "Mobile",
+                "iOS",
+                "MacOS"
             ],
             "link": "https://github.com/ShahadIshraq/KhorchaPati",
             "status": "Ongoing"
@@ -42,7 +49,9 @@
                 "Spring Boot",
                 "FastAPI",
                 "Gemini 2.5",
-                "Computer Vision"
+                "Computer Vision",
+                "Hyperledger Fabric",
+                "Keras"
             ],
             "link": "https://github.com/orgs/visionX-DU/repositories"
         },
@@ -52,7 +61,11 @@
             "tech": [
                 "React Native",
                 "Expo",
-                "AI Recommendations"
+                "Spring Boot",
+                "FastAPI",
+                "Stripe API",
+                "Google Maps API",
+                "MistralAI"
             ],
             "link": "https://github.com/tasniaiffat/Locato"
         },
@@ -63,7 +76,9 @@
                 "Python",
                 "OpenCV",
                 "Networking",
-                "P2P"
+                "P2P",
+                "Tkinter",
+                "Pyaudio"
             ],
             "link": "https://github.com/jamal-uddin5823/CSE3101-Networking-Project-"
         },
@@ -74,7 +89,8 @@
                 "Next.js",
                 "Spring Boot",
                 "FastAPI",
-                "AR"
+                "AR",
+                "Gemini 2.5"
             ],
             "link": "https://github.com/jamal-uddin5823/GadgetGrove-Javafest"
         },
@@ -83,8 +99,10 @@
             "description": "Medical diagnosis and doctor search platform with AI-driven symptom checker.",
             "tech": [
                 "Java",
+                "Android",
                 "Firebase",
-                "AI"
+                "MistralAI",
+                "Room Database"
             ],
             "link": "https://github.com/jamal-uddin5823/MediHelp"
         }
@@ -105,7 +123,8 @@
             "Expo",
             "Electron",
             "HTML",
-            "CSS"
+            "CSS",
+            "Tailwind CSS"
         ],
         "backend": [
             "Express",
@@ -143,24 +162,24 @@
             "title": "InnovateX 2025 Hackathon",
             "position": "2nd Runner-up",
             "organizer": "University of Asia Pacific",
-            "team": "Team DUPrometheus"
+            "team": "Team DU_Prometheus"
         },
         {
             "title": "1st S.N. Bose Science Festival 2025 Hackathon",
             "position": "5th Place",
-            "team": "Team DUPrometheus"
+            "team": "Team DU_Prometheus"
         },
         {
             "title": "BUET CSE Fest 2024 Hackathon",
             "position": "Top 10 Finalist",
-            "team": "Team NOFEAR"
+            "team": "Team NO_FEAR"
         }
     ],
     "education": [
         {
             "degree": "B.Sc. in Computer Science and Engineering",
             "institution": "University of Dhaka",
-            "year": "Expected Jan 2026",
+            "year": "Expected Jan 2026"
         }
     ],
     "certifications": [
