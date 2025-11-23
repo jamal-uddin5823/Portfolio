@@ -35,7 +35,6 @@ export default function Experience() {
                                         <time className="font-caveat font-medium text-primary">{edu.year}</time>
                                     </div>
                                     <div className="text-slate-400 font-medium">{edu.institution}</div>
-                                    <div className="text-slate-500 text-sm mt-2">{edu.details}</div>
                                 </div>
                             </motion.div>
                         ))}
