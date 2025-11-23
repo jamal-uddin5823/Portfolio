@@ -7,7 +7,6 @@ import { Suspense } from "react";
 import NeuralNetwork from "@/components/canvas/NeuralNetwork";
 import portfolioData from "@/data/portfolio.json";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -53,10 +52,10 @@ export default function Hero() {
                     </p>
                     <div className="flex flex-wrap gap-3 mt-6">
                         <Button asChild size="default" className="bg-primary text-black hover:bg-primary/90 md:size-lg">
-                            <Link href="#projects">View Work</Link>
+                            <a href="#projects">View Work</a>
                         </Button>
                         <Button asChild variant="outline" size="default" className="border-white/20 hover:bg-white/10 md:size-lg">
-                            <Link href="#contact">Contact Me</Link>
+                            <a href="#contact">Contact Me</a>
                         </Button>
                         <Button asChild variant="outline" size="default" className="border-white/20 hover:bg-white/10 md:size-lg">
                             <a href="/Final_CV_Jamal.pdf" target="_blank" rel="noopener noreferrer">Resume</a>

@@ -19,11 +19,12 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-8">
                 {[
                     { name: "About", href: "#about" },
-                    { name: "Research", href: "#research" },
+                    {name: "Skills", href: "#skills" },
                     { name: "Projects", href: "#projects" },
+                    { name: "Experience", href: "#experience" },
                     { name: "Contact", href: "#contact" },
                 ].map((link) => (
-                    <Link
+                    <a
                         key={link.name}
                         href={link.href}
                         className="relative text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-1"
@@ -35,7 +36,7 @@ export default function Navbar() {
                             whileHover={{ scaleX: 1 }}
                             transition={{ duration: 0.3 }}
                         />
-                    </Link>
+                    </a>
                 ))}
             </div>
 
