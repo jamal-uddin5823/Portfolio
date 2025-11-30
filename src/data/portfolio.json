@@ -161,17 +161,25 @@
         {
             "title": "InnovateX 2025 Hackathon",
             "position": "2nd Runner-up",
-            "organizer": "University of Asia Pacific",
+            "organizer": "University of Asia Pacific (UAP)",
             "team": "Team DU_Prometheus"
         },
         {
             "title": "1st S.N. Bose Science Festival 2025 Hackathon",
             "position": "5th Place",
+            "organizer": "BRAC-Biggan Adda",
             "team": "Team DU_Prometheus"
+        },
+        {
+            "title": "BUBT InnovateX Hackathon 2025",
+            "position": "7th Place",
+            "organizer": "Bangladesh University of Business and Technology (BUBT)",
+            "team": "Team DU_Caffeine"
         },
         {
             "title": "BUET CSE Fest 2024 Hackathon",
             "position": "Top 10 Finalist",
+            "organizer": "BUET",
             "team": "Team NO_FEAR"
         }
     ],
