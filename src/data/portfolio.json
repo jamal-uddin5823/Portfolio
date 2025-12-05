@@ -159,6 +159,12 @@
     },
     "hackathons": [
         {
+            "title": "Solvio AI Hackathon 2025",
+            "organizer" : "Sheba Platform Ltd., Programming Hero",
+            "position": "Champion",
+            "team": "Team DU_Caffeine"
+        },
+        {
             "title": "InnovateX 2025 Hackathon",
             "position": "2nd Runner-up",
             "organizer": "University of Asia Pacific (UAP)",
