@@ -47,6 +47,7 @@ export const getTechIconUrl = (tech: string): string | null => {
         "TensorFlow": "tensorflow",
         "Keras": "keras",
         "PyTorch": "pytorch",
+        "Pytorch": "pytorch",
         "OpenCV": "opencv",
         "Scikit-learn": "scikitlearn",
         "LangChain": "langchain",
@@ -54,7 +55,8 @@ export const getTechIconUrl = (tech: string): string | null => {
         "Hugging Face": "huggingface",
         "AI": "openai",
         "Gemini 2.5": "googlegemini",
-        "Foundational Models": "openai",
+        "Foundational Models": "anthropic",
+        "Google Lens Reverse Image Search": "google",
 
         // Tools
         "Git": "git",

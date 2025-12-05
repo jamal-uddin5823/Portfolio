@@ -42,18 +42,27 @@
             "status": "Ongoing"
         },
         {
-            "title": "PoribeshAI",
-            "description": "AI-powered smart waste management platform. Features waste classification (94% accuracy), dynamic route optimization (30% cost reduction), and microservices architecture.",
+            "title": "Zerobin",
+            "description": "Bangladesh's first AI-driven waste management platform with gamified reporting, e-waste marketplace, and predictive analytics along with computer vision pipeline using Gemini 2.5 Flash + LangChain for waste classification and fraud detection with EXIF metadata extraction, reverse image search, and AI-generated image verification.Implemented predictive ML models: LightGBM for 3-day waste hotspot forecasting and LSTM for bin overflow prevention, achieving 94.5% accuracy on fine-tuned Bangla sentiment analysis. Built full-stack platform with FastAPI backend, Next.js frontend, and LangGraph-powered agentic AI chatbot with database access and web search capabilities for citizen engagement.",
             "tech": [
                 "React",
-                "Spring Boot",
                 "FastAPI",
                 "Gemini 2.5",
-                "Computer Vision",
-                "Hyperledger Fabric",
-                "Keras"
+                "Hugging Face",
+                "Google Lens Reverse Image Search",
+                "Keras",
+                "Pytorch",
+                "LangChain",
+                "LangGraph",
+                "PostgreSQL"
             ],
-            "link": "https://github.com/orgs/visionX-DU/repositories"
+            "link": "https://github.com/orgs/SOLVIO-Hackathon/repositories",
+            "liveLink": "https://frontend-solvio.vercel.app",
+            "achievement": {
+                "title": "Champion - Solvio AI Hackathon 2025",
+                "position": "Champion",
+                "hackathon": "Solvio AI Hackathon 2025"
+            }
         },
         {
             "title": "Locato",

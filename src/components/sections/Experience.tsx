@@ -40,7 +40,9 @@ export default function Experience() {
                         ))}
 
                         {/* Hackathons */}
-                        {portfolioData.hackathons.map((hack, index) => (
+                        {portfolioData.hackathons.map((hack, index) => {
+                            const isChampion = hack.position === "Champion";
+                            return (
                             <motion.div
                                 key={`hack-${index}`}
                                 initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
@@ -48,7 +50,7 @@ export default function Experience() {
                                 viewport={{ once: true }}
                                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
                             >
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-white/5 text-neutral-400 shadow-sm backdrop-blur-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <div className={`flex items-center justify-center w-10 h-10 rounded-full border ${isChampion ? 'border-yellow-500/50 bg-yellow-500/20 text-yellow-300 shadow-[0_0_15px_rgba(234,179,8,0.4)]' : 'border-white/10 bg-white/5 text-neutral-400'} shadow-sm backdrop-blur-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10`}>
                                     <Trophy className="w-5 h-5" />
                                 </div>
                                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl border border-white/10 shadow-lg hover:border-secondary/30 transition-all duration-300">
@@ -61,7 +63,8 @@ export default function Experience() {
                                     {hack.organizer && <div className="text-slate-500 text-sm mt-1">{hack.organizer}</div>}
                                 </div>
                             </motion.div>
-                        ))}
+                            );
+                        })}
 
                         {/* Certifications */}
                         {portfolioData.certifications.map((cert, index) => {
