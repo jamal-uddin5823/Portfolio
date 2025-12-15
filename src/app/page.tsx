@@ -19,9 +19,10 @@ export default function Home() {
 
       <Skills />
 
-      <Projects />
-
       <Experience />
+
+
+      <Projects />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 text-center">
