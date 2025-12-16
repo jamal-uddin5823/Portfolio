@@ -53,9 +53,7 @@ export const getTechIconUrl = (tech: string): string | null => {
         "LangChain": "langchain",
         "LangGraph": "langchain",
         "Hugging Face": "huggingface",
-        "AI": "openai",
         "Gemini 2.5": "googlegemini",
-        "Foundational Models": "anthropic",
         "Google Lens Reverse Image Search": "google",
 
         // Tools

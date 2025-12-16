@@ -171,31 +171,42 @@
             "title": "Solvio AI Hackathon 2025",
             "organizer" : "Sheba Platform Ltd., Programming Hero",
             "position": "Champion",
-            "team": "Team DU_Caffeine"
+            "team": "Team DU_Caffeine",
+            "issued_on": "December 2025",
+            "link": "/solvio.jpg",
+            "details": "Secured 1st place among 750+ teams from 60+ universities at the Solvio AI Hackathon 2025. \nWorked as Tech Lead & Backend Developer of Team DU_Caffeine."
         },
         {
             "title": "InnovateX 2025 Hackathon",
             "position": "2nd Runner-up",
             "organizer": "University of Asia Pacific (UAP)",
-            "team": "Team DU_Prometheus"
+            "team": "Team DU_Prometheus",
+            "issued_on": "May 2025",
+            "link": "/uap.jpg",
+            "details": "InnovateX 2025 was a three-day tech fest hosted by the University of Asia Pacific. One of the highlights was an intense 10-hour hackathon, where we developed “TryShip” — a platform aimed at bridging the gap between students and the industry. TryShip empowers freshers to gain hands-on experience by completing real-world micro tasks from industry professionals, fostering practical learning through doing."
         },
         {
             "title": "1st S.N. Bose Science Festival 2025 Hackathon",
             "position": "5th Place",
             "organizer": "BRAC-Biggan Adda",
-            "team": "Team DU_Prometheus"
+            "team": "Team DU_Prometheus",
+            "issued_on": "May 2025",
+            "details": "The 1st S.N. Bose National Science Festival-2025 was a four-day event held at the University of Dhaka's Curzon Hall from May 22–25, 2025 and organized by BRAC and Biggan Adda. The Science Fest had 8 segments and among them IT Hackathon is the one that we participated.\nWe participated with \"Proyash\", a platform designed to boost science awareness among youngsters. It includes an AI Science Coach for topic explanations and assessments, a Virtual Lab for physics, chemistry, and biology simulations, Science Quests to explore challenges, Micro Missions for online data collection, and a Virtual Expo to join and compete in science fairs virtually."
         },
         {
             "title": "BUBT InnovateX Hackathon 2025",
             "position": "7th Place",
             "organizer": "Bangladesh University of Business and Technology (BUBT)",
-            "team": "Team DU_Caffeine"
+            "team": "Team DU_Caffeine",
+            "issued_on": "November 2025",
+            "link": "/bubt.jpg"
         },
         {
             "title": "BUET CSE Fest 2024 Hackathon",
             "position": "Top 10 Finalist",
             "organizer": "BUET",
-            "team": "Team NO_FEAR"
+            "team": "Team NO_FEAR",
+            "issued_on": "December 2024"
         }
     ],
     "education": [
@@ -207,11 +218,22 @@
     ],
     "certifications": [
         {
+            "name": "Group Testing: An Important Tool for Data Science",
+            "issuer": "Indian Institute of Technology (IIT) Bombay",
+            "issued_on": "July 2025",
+            "event": "2025 International Summer School",
+            "link":"/IITB.jpg"
+        },
+        {
             "name": "Supervised Machine Learning: Regression and Classification (Coursera)",
+            "issuer": "Coursera",
+            "issued_on": "June 2024",
             "link": "https://www.coursera.org/account/accomplishments/verify/Z9HXZMP6VDMZ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course"
         },
         {
             "name": "Advanced Learning Algorithms (Coursera)",
+            "issuer": "Coursera",
+            "issued_on": "August 2024",
             "link": "https://www.coursera.org/account/accomplishments/verify/C21XMARQX766?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
         }
     ]
