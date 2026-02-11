@@ -11,15 +11,25 @@
         "bio": "I am a Computer Science undergraduate at the University of Dhaka with a strong focus on AI, Machine Learning, and Full Stack Development. My research interests include Computer Vision and Deep Learning, specifically in low-light image enhancement."
     },
     "thesis": {
-        "title": "Face Recognition in Low-Light Videos",
-        "description": "Enhancing visibility in low-light conditions using Deep Learning-based Image Enhancement to improve Face Recognition accuracy.",
+        "title": "Face Recognition in Low-Light: Enhancing Visibility with Deep Learning",
+        "date": "Feb 2026",
+        "description": "Engineered a recognition-aware framework using a novel Discriminative Multi-Level Face Loss (InfoNCE, Triplet Margin) to preserve identity in extreme conditions (1% light).",
         "basePaper": "HVI-CIDNet (CVPR2025)",
-        "status": "Ongoing Thesis",
+        "status": "Ongoing Research",
+        "achievements": [
+            "Developed a coupled pipeline with HVI-CIDNet for restoration and frozen AdaFace for hierarchical supervision across 4 feature depths.",
+            "Designed a physics-based synthesis pipeline modeling Poisson-Gaussian noise and white balance failure to create realistic training data.",
+            "Achieved a 65% relative EER reduction and 3.2% TAR improvement at high-security thresholds (FAR=0.1%), validating increased feature separation."
+        ],
         "tags": [
             "Computer Vision",
             "Deep Learning",
             "Low-Light Enhancement",
-            "Face Recognition"
+            "Face Recognition",
+            "InfoNCE",
+            "Triplet Loss",
+            "AdaFace",
+            "HVI-CIDNet"
         ]
     },
     "projects": [
@@ -214,6 +224,19 @@
             "degree": "B.Sc. in Computer Science and Engineering",
             "institution": "University of Dhaka",
             "year": "Expected Jan 2026"
+        }
+    ],
+    "experience": [
+        {
+            "company": "TherapBD Ltd.",
+            "location": "Dhaka, Bangladesh",
+            "position": "Associate Software Engineer",
+            "duration": "Feb 2026 -- Present",
+            "responsibilities": [
+                "Contributing to the core Java backend services for enterprise-scale electronic documentation and health-tracking systems used in international markets.",
+                "Engaging in deep-dive codebase analysis and architectural onboarding to maintain high-availability and high-concurrency Java-based systems.",
+                "Collaborating with senior engineers within an Agile framework to implement secure, scalable, and modular backend features while adhering to strict production-grade coding standards."
+            ]
         }
     ],
     "certifications": [

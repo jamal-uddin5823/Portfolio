@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import portfolioData from "@/data/portfolio.json";
 import { TracingBeam } from "@/components/ui/tracing-beam";
-import { GraduationCap, Trophy, FileBadge, Info } from "lucide-react";
+import { GraduationCap, Trophy, FileBadge, Info, Briefcase } from "lucide-react";
 import { useState } from "react";
 import {
     Dialog,
@@ -44,6 +44,37 @@ export default function Experience() {
                                         <time className="font-caveat font-medium text-primary">{edu.year}</time>
                                     </div>
                                     <div className="text-slate-400 font-medium">{edu.institution}</div>
+                                </div>
+                            </motion.div>
+                        ))}
+
+                        {/* Work Experience */}
+                        {portfolioData.experience.map((exp, index) => (
+                            <motion.div
+                                key={`exp-${index}`}
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+                            >
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-green-500/50 bg-green-500/20 text-green-300 shadow-sm backdrop-blur-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+                                    <Briefcase className="w-5 h-5" />
+                                </div>
+                                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl border border-white/10 shadow-lg hover:border-green-500/30 transition-all duration-300">
+                                    <div className="flex items-center justify-between space-x-2 mb-2">
+                                        <div className="font-bold text-white text-lg">{exp.position}</div>
+                                        <time className="font-caveat font-medium text-green-400">{exp.duration}</time>
+                                    </div>
+                                    <div className="text-slate-300 font-semibold mb-1">{exp.company}</div>
+                                    <div className="text-slate-500 text-sm mb-3">{exp.location}</div>
+                                    <ul className="space-y-2 text-slate-400 text-sm">
+                                        {exp.responsibilities.map((resp, idx) => (
+                                            <li key={idx} className="flex items-start gap-2">
+                                                <span className="text-green-400 mt-1 shrink-0">•</span>
+                                                <span>{resp}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </motion.div>
                         ))}
