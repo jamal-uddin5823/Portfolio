@@ -2,13 +2,13 @@
     "personalInfo": {
         "name": "Mohd. Jamal Uddin Mallick Tahmid",
         "shortName": "Jamal Uddin",
-        "title": "CSE Undergrad & AI Researcher",
+        "title": "Associate Software Engineer at TherapBD Ltd. & AI Researcher",
         "email": "jamaluddin10775@gmail.com",
         "phone": "+880 1580384068",
         "github": "https://github.com/jamal-uddin5823",
         "linkedin": "https://www.linkedin.com/in/jamal-uddin-mallick-791221282/",
         "location": "Mohammadpur, Dhaka, Bangladesh",
-        "bio": "I am a Computer Science undergraduate at the University of Dhaka with a strong focus on AI, Machine Learning, and Full Stack Development. My research interests include Computer Vision and Deep Learning, specifically in low-light image enhancement."
+        "bio": "Associate Software Engineer at TherapBD Ltd., contributing to enterprise-scale Java backend services for health-tracking systems. Computer Science graduate from the University of Dhaka with research focus on Computer Vision and Deep Learning, specifically in low-light image enhancement and face recognition."
     },
     "thesis": {
         "title": "Face Recognition in Low-Light: Enhancing Visibility with Deep Learning",
@@ -223,7 +223,7 @@
         {
             "degree": "B.Sc. in Computer Science and Engineering",
             "institution": "University of Dhaka",
-            "year": "Expected Jan 2026"
+            "year": "Feb 2026"
         }
     ],
     "experience": [
@@ -232,6 +232,7 @@
             "location": "Dhaka, Bangladesh",
             "position": "Associate Software Engineer",
             "duration": "Feb 2026 -- Present",
+            "link": "/therap.jpg",
             "responsibilities": [
                 "Contributing to the core Java backend services for enterprise-scale electronic documentation and health-tracking systems used in international markets.",
                 "Engaging in deep-dive codebase analysis and architectural onboarding to maintain high-availability and high-concurrency Java-based systems.",

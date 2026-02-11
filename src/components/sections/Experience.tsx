@@ -15,6 +15,7 @@ import {
 
 export default function Experience() {
     const [selectedHackathon, setSelectedHackathon] = useState<any>(null);
+    const [selectedExperience, setSelectedExperience] = useState<any>(null);
 
     return (
         <section id="experience" className="py-20 px-6 bg-black/20">
@@ -26,11 +27,58 @@ export default function Experience() {
                 <TracingBeam className="px-6">
                     <div className="space-y-12 relative">
 
+                        {/* Work Experience */}
+                        {portfolioData.experience.map((exp, index) => {
+                            // @ts-ignore
+                            const hasDetails = exp.responsibilities && exp.responsibilities.length > 0;
+                            return (
+                            <motion.div
+                                key={`exp-${index}`}
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+                            >
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-green-500/50 bg-green-500/20 text-green-300 shadow-sm backdrop-blur-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+                                    <Briefcase className="w-5 h-5" />
+                                </div>
+                                <div
+                                    className={`w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl border border-white/10 shadow-lg hover:border-green-500/30 transition-all duration-300 ${hasDetails ? 'cursor-pointer' : ''}`}
+                                    onClick={() => hasDetails && setSelectedExperience(exp)}
+                                >
+                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                        <div className="font-bold text-white text-lg">{exp.position}</div>
+                                        <time className="font-caveat font-medium text-green-400 text-sm sm:text-base">{exp.duration}</time>
+                                    </div>
+                                    <div className="text-slate-300 font-semibold mb-1">{exp.company}</div>
+                                    <div className="text-slate-500 text-sm mb-2">{exp.location}</div>
+                                    {hasDetails && (
+                                        <div className="text-green-400 text-xs font-medium mt-2 flex items-center gap-1 opacity-70 hover:opacity-100 transition-opacity">
+                                            <Info className="w-3 h-3" />
+                                            Click for details
+                                        </div>
+                                    )}
+                                    {/* @ts-ignore */}
+                                    {exp.link && (
+                                        <div className="mt-4 rounded-lg overflow-hidden border border-white/10 hover:border-green-500/30 transition-all group/exp">
+                                            <img
+                                                src={exp.link}
+                                                alt={`${exp.company} certificate`}
+                                                className="w-full h-auto object-cover group-hover/exp:scale-105 transition-transform duration-300"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            </motion.div>
+                            );
+                        })}
+
                         {/* Education */}
                         {portfolioData.education.map((edu, index) => (
                             <motion.div
                                 key={`edu-${index}`}
-                                initial={{ opacity: 0, x: -50 }}
+                                initial={{ opacity: 0, x: 50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
@@ -39,42 +87,11 @@ export default function Experience() {
                                     <GraduationCap className="w-5 h-5" />
                                 </div>
                                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl border border-white/10 shadow-lg hover:border-primary/30 transition-all duration-300">
-                                    <div className="flex items-center justify-between space-x-2 mb-1">
+                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
                                         <div className="font-bold text-white text-lg">{edu.degree}</div>
-                                        <time className="font-caveat font-medium text-primary">{edu.year}</time>
+                                        <time className="font-caveat font-medium text-primary text-sm sm:text-base">{edu.year}</time>
                                     </div>
                                     <div className="text-slate-400 font-medium">{edu.institution}</div>
-                                </div>
-                            </motion.div>
-                        ))}
-
-                        {/* Work Experience */}
-                        {portfolioData.experience.map((exp, index) => (
-                            <motion.div
-                                key={`exp-${index}`}
-                                initial={{ opacity: 0, x: 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
-                            >
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-green-500/50 bg-green-500/20 text-green-300 shadow-sm backdrop-blur-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
-                                    <Briefcase className="w-5 h-5" />
-                                </div>
-                                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl border border-white/10 shadow-lg hover:border-green-500/30 transition-all duration-300">
-                                    <div className="flex items-center justify-between space-x-2 mb-2">
-                                        <div className="font-bold text-white text-lg">{exp.position}</div>
-                                        <time className="font-caveat font-medium text-green-400">{exp.duration}</time>
-                                    </div>
-                                    <div className="text-slate-300 font-semibold mb-1">{exp.company}</div>
-                                    <div className="text-slate-500 text-sm mb-3">{exp.location}</div>
-                                    <ul className="space-y-2 text-slate-400 text-sm">
-                                        {exp.responsibilities.map((resp, idx) => (
-                                            <li key={idx} className="flex items-start gap-2">
-                                                <span className="text-green-400 mt-1 shrink-0">•</span>
-                                                <span>{resp}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
                             </motion.div>
                         ))}
@@ -181,6 +198,51 @@ export default function Experience() {
                     </div>
                 </TracingBeam>
             </div>
+
+            {/* Experience Details Modal */}
+            <Dialog open={!!selectedExperience} onOpenChange={() => setSelectedExperience(null)}>
+                <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-black/95 border border-white/10">
+                    <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                            <Briefcase className="w-6 h-6 text-green-400" />
+                            {selectedExperience?.position}
+                        </DialogTitle>
+                        <div className="flex flex-col gap-1 mt-2">
+                            <div className="text-lg text-slate-300 font-semibold">{selectedExperience?.company}</div>
+                            <div className="text-slate-400 text-sm">{selectedExperience?.location}</div>
+                            <span className="text-green-400 text-sm font-medium">
+                                {selectedExperience?.duration}
+                            </span>
+                        </div>
+                    </DialogHeader>
+                    <div className="text-slate-300 mt-4 space-y-4">
+                        {/* @ts-ignore */}
+                        {selectedExperience?.responsibilities && (
+                            <div className="space-y-3">
+                                <h3 className="text-white font-semibold text-lg mb-3">Key Responsibilities:</h3>
+                                {/* @ts-ignore */}
+                                {selectedExperience.responsibilities.map((resp, idx) => (
+                                    <div key={idx} className="flex items-start gap-3 bg-white/5 p-3 rounded-lg border border-white/10">
+                                        <span className="text-green-400 mt-1 shrink-0">•</span>
+                                        <span className="text-slate-300 leading-relaxed">{resp}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                        {/* @ts-ignore */}
+                        {selectedExperience?.link && (
+                            <div className="mt-4 rounded-lg overflow-hidden border border-white/10">
+                                <img
+                                    src={selectedExperience.link}
+                                    alt={`${selectedExperience?.company} certificate`}
+                                    className="w-full h-auto object-cover"
+                                    loading="lazy"
+                                />
+                            </div>
+                        )}
+                    </div>
+                </DialogContent>
+            </Dialog>
 
             {/* Hackathon Details Modal */}
             <Dialog open={!!selectedHackathon} onOpenChange={() => setSelectedHackathon(null)}>

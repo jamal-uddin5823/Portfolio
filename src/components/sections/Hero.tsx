@@ -72,31 +72,22 @@ export default function Hero() {
                 >
                     <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
                         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <h3 className="text-2xl font-bold mb-2 text-white">Current Research</h3>
+                        <h3 className="text-2xl font-bold mb-2 text-white">Undergraduate Research</h3>
                         <h4 className="text-xl text-primary mb-3">{portfolioData.thesis.title}</h4>
-                        <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                        <p className="text-gray-300 mb-3 text-sm leading-relaxed">
                             {portfolioData.thesis.description}
                         </p>
-                        {/* @ts-ignore */}
-                        {portfolioData.thesis.achievements && (
-                            <ul className="space-y-2 mb-4 text-sm text-gray-400">
-                                {/* @ts-ignore */}
-                                {portfolioData.thesis.achievements.map((achievement, idx) => (
-                                    <li key={idx} className="flex items-start gap-2">
-                                        <span className="text-primary mt-1 shrink-0">\u2022</span>
-                                        <span>{achievement}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                        <div className="flex flex-wrap gap-2">
+                        <div className="mb-4 text-sm text-gray-400 bg-white/5 p-3 rounded-lg border border-white/10">
+                            <span className="text-green-400 font-semibold">Key Results:</span> 65% relative EER reduction and 3.2% TAR improvement at high-security thresholds (FAR=0.1%)
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-4">
                             {portfolioData.thesis.tags.map(tag => (
                                 <span key={tag} className="text-xs px-3 py-1 rounded-full bg-white/10 text-gray-300">
                                     {tag}
                                 </span>
                             ))}
                         </div>
-                        <div className="mt-4 text-sm text-gray-500">
+                        <div className="text-sm text-gray-500">
                             Base Paper: <span className="text-secondary">{portfolioData.thesis.basePaper}</span>
                             {/* @ts-ignore */}
                             {portfolioData.thesis.date && <span className="ml-4">Date: <span className="text-primary">{portfolioData.thesis.date}</span></span>}
